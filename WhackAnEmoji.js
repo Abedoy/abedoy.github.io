@@ -183,7 +183,7 @@ function hideCredits()
 function showGameView()
 {
 	Tween.get(titleView).to({x: -480}, 200).call(function(){startButtonListeners('rmv'); stage.removeChild(titleView); titleView = null; showemoji();});
-	score = new Text('0' + '/' + totalemojis, 'bold 15px Arial', '#EEE');
+	score = new Text('0' + '/' + totalemojis, 'bold 15px Arial', '#000');
 	score.x = 58;
 	score.y = 21;
 	stage.addChild(score);
