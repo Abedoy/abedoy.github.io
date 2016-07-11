@@ -1,3 +1,7 @@
+This is an ongoing project where I plan to put multiple games on a website. So far I've set up some pages and a whack a mole type of game.
+
+
+# If you want a similar basic template to start your own website, read below.
 # [Start Bootstrap](http://startbootstrap.com/) - [1 Col Portfolio](http://startbootstrap.com/template-overviews/1-col-portfolio/)
 
 [1 Col Portfolio](http://startbootstrap.com/template-overviews/1-col-portfolio/) is a one column portfolio template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
