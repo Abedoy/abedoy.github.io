@@ -1,5 +1,5 @@
 Website at http://www.memearcade.me/
-This is an ongoing project where I plan to put multiple games on a website. So far I've set up some pages and a whack a mole type of game.
+* This is an ongoing project where I plan to put multiple games on a website. So far I've set up some pages and a whack a mole type of game.
 
 
 # If you want a similar basic template to start your own website, read below.
