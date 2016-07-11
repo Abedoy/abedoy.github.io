@@ -111,6 +111,7 @@ function loadGfx(e)
 	if(e.target.name = 'playBtn'){playBtn = new Bitmap(playBtnImg);}
 	if(e.target.name = 'creditsBtn'){creditsBtn = new Bitmap(creditsBtnImg);}
 	if(e.target.name = 'alertBg'){alertBg = new Bitmap(alertBgImg);}
+	
 	/* --CreditsView
 	   --emojis */
 	
@@ -151,11 +152,13 @@ function startButtonListeners(action)
 	{
 		titleView.getChildAt(1).onPress = showGameView;
 		titleView.getChildAt(2).onPress = showCredits;
+		//titleView.getChildAt(2).onPress = reloadGame;
 	}
 	else
 	{
 		titleView.getChildAt(1).onPress = null;
 		titleView.getChildAt(2).onPress = null;
+		//titleView.getChildAt(3).onPress = null;
 	}
 }
 
@@ -230,19 +233,26 @@ function emojiHit()
 	stage.update();
 }
 
+function reloadPage()
+{
+	location.reload();
+}
 function showAlert()
 {
 	alertBg.x = centerX - 120;
-	alertBg.y = -80;
+	alertBg.y = centerY -80;
 	stage.addChild(alertBg);
-	
-	Tween.get(alertBg).to({y:centerY - 80}, 200).call(function()
+	Tween.get(alertBg).to({y:centerY - 110}, 200).call(function()
 	{
 		Ticker.removeAllListeners();
+		
 		var score = new Text(emojisHit + '/' + totalemojis, 'bold 20px Arial', '#EEE');
 		score.x = 220;
 		score.y = 205;
 		stage.addChild(score);
 		stage.update();
+		alertBg.onPress = reloadPage;
+		
 	});
+	
 }
